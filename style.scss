@@ -1,0 +1,175 @@
+$color-paleBlue: hsl(225, 100%, 94%);
+$color-brightBlue: hsl(245, 75%, 52%);
+$color-veryPaleBlue: hsl(225, 100%, 98%);
+$color-desaturatedBlue: hsl(224, 23%, 55%);
+$color-darkBlue: hsl(223, 47%, 23%);
+$color-white: hsl(0, 0%, 100%);
+
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: "Red Hat", sans-serif;
+
+}
+
+body {
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-color: $color-veryPaleBlue;
+
+    @media only screen and (max-width: 414px) {
+        background-size:150%;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    @media only screen and (min-width: 700px) {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-white;
+    border-radius: 0 0 15px 15px;  
+}
+
+.c-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 2px solid $color-paleBlue;
+    border-radius: 15px;
+
+    @media only screen and (min-width: 700px) {
+        width: 40%;
+        margin-top: 5%;
+    }
+}
+
+h1 {
+    margin: 5% 0 5% 0;
+    color: $color-darkBlue;
+    font-weight: 700;
+}
+
+p {
+    text-align: center;
+    color: $color-desaturatedBlue;
+
+    @media only screen and (min-width: 700px) {
+        max-width: 80%;
+    }
+}
+
+.btn {
+   
+    &-cta {
+        display: flex;
+        flex-direction: column;
+        width:90%;
+        gap: 25px;
+    }
+
+    &-payment {
+        background-color: $color-brightBlue;
+        color: $color-veryPaleBlue;
+        font-weight: 700;
+        border-radius: 10px;
+        height: 50px;
+        box-shadow: 0 15px 10px rgb(0 0 0 / 0.2);
+        cursor: pointer;
+
+        @media only screen and (min-width: 700px) {
+           &:hover {
+            opacity: 0.7;
+           }
+        }
+    }  
+
+    &-cancel {
+        background-color: $color-white;
+        color: $color-desaturatedBlue;
+        font-weight: 700;
+        margin-bottom: 10%;
+        cursor: pointer;
+
+        @media only screen and (min-width: 700px) {
+            &:hover {
+              color:  $color-darkBlue;
+            }
+        }
+    }
+}
+
+
+.c-plan {
+    display: flex;
+    width: 90%;
+    background-color: $color-veryPaleBlue;
+    gap:20px;
+    border-radius: 10px;
+    margin: 10% 0 10% 0;
+    height: 100px;
+
+    .plan-note {
+        padding: 8px;
+        width: 60px;
+        height: 60px;
+        align-self: center;
+    }
+
+    .plan {
+       &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       } 
+
+       &-name {
+        font-weight: 700;
+       }
+
+       &-cost {
+        color: $color-desaturatedBlue;
+       }
+    }
+
+    .change {
+        margin-left: auto;
+        align-self: center;
+        padding: 8px;
+        font-weight: 700;
+        margin-right: 5%;
+
+        @media only screen and (min-width: 700px) {
+            &:hover {
+             opacity: 0.7;
+             text-decoration: none;
+            } 
+        }
+    }
+}
+
+.hero-banner--image { 
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+

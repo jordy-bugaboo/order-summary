@@ -1,0 +1,153 @@
+* {
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-family: inherit;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Red Hat", sans-serif;
+}
+
+body {
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: hsl(225deg, 100%, 98%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@media only screen and (max-width: 414px) {
+  body {
+    background-size: 150%;
+  }
+}
+@media only screen and (min-width: 700px) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0 0 15px 15px;
+}
+
+.c-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 2px solid hsl(225deg, 100%, 94%);
+  border-radius: 15px;
+}
+@media only screen and (min-width: 700px) {
+  .c-container {
+    width: 40%;
+    margin-top: 5%;
+  }
+}
+
+h1 {
+  margin: 5% 0 5% 0;
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 700;
+}
+
+p {
+  text-align: center;
+  color: hsl(224deg, 23%, 55%);
+}
+@media only screen and (min-width: 700px) {
+  p {
+    max-width: 80%;
+  }
+}
+
+.btn-cta {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 25px;
+}
+.btn-payment {
+  background-color: hsl(245deg, 75%, 52%);
+  color: hsl(225deg, 100%, 98%);
+  font-weight: 700;
+  border-radius: 10px;
+  height: 50px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+@media only screen and (min-width: 700px) {
+  .btn-payment:hover {
+    opacity: 0.7;
+  }
+}
+.btn-cancel {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(224deg, 23%, 55%);
+  font-weight: 700;
+  margin-bottom: 10%;
+  cursor: pointer;
+}
+@media only screen and (min-width: 700px) {
+  .btn-cancel:hover {
+    color: hsl(223deg, 47%, 23%);
+  }
+}
+
+.c-plan {
+  display: flex;
+  width: 90%;
+  background-color: hsl(225deg, 100%, 98%);
+  gap: 20px;
+  border-radius: 10px;
+  margin: 10% 0 10% 0;
+  height: 100px;
+}
+.c-plan .plan-note {
+  padding: 8px;
+  width: 60px;
+  height: 60px;
+  align-self: center;
+}
+.c-plan .plan-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.c-plan .plan-name {
+  font-weight: 700;
+}
+.c-plan .plan-cost {
+  color: hsl(224deg, 23%, 55%);
+}
+.c-plan .change {
+  margin-left: auto;
+  align-self: center;
+  padding: 8px;
+  font-weight: 700;
+  margin-right: 5%;
+}
+@media only screen and (min-width: 700px) {
+  .c-plan .change:hover {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+}
+
+.hero-banner--image {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}/*# sourceMappingURL=style.css.map */
